@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Card Fraud Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Credit Card Fraud Detection</h2>
+        <form action="/predict" method="post">
+            <label for="features">Enter features (comma-separated):</label><br>
+            <input type="text" id="features" name="features" placeholder="feature1,feature2,...,feature30"><br>
+            <input type="submit" value="Predict">
+        </form>
+        <h3>{{ prediction_text }}</h3>
+    </div>
+</body>
+</html>
